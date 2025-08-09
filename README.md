@@ -1,25 +1,6 @@
 # chinparu-goal.vercel.app-
 🎯 Ziel der App: Benutzer lädt Begegnungen + Ergebnisse hoch (z. B. als CSV-Datei). App analysiert die Tore der letzten Spiele pro Team. App zeigt pro Mannschaft eine geschätzte Anzahl Tore für ein nächstes Spiel.
-port React, { useState } from "react";
-import Papa from "papaparse";
-import { Upload } from "lucide-react";
-
-export default function ChinparuGoal() {
-  const [teamStats, setTeamStats] = useState({});
-
-  const handleFileUpload = (e) => {
-    const file = e.target.files[0];
-    Papa.parse(file, {
-      header: true,
-      skipEmptyLines: true,
-      complete: (results) => {
-        analyzeData(results.data);
-      },
-    });
-  };
-
-  const analyzeData = (matches) => {
-    const stats = {};
+};
 
     matches.forEach((match) => {
       const homeTeam = match["Team Heim"];
