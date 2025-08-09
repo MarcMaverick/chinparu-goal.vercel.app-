@@ -1,3 +1,20 @@
+"dependencies": {
+  "react": "^18.2.0",
+  "react-dom": "^18.2.0",
+  "react-scripts": "5.0.1",
+  "papaparse": "^5.4.1",
+  "lucide-react": "^0.284.0"
+},
+"scripts": {
+  "start": "react-scripts start",
+  "build": "react-scripts build",
+  "test": "react-scripts test",
+  "eject": "react-scripts eject"
+}npm install
+git add package.json package-lock.json
+git commit -m "Add react-scripts dependency"
+git push
+
 
 
     matches.forEach((match) => {
